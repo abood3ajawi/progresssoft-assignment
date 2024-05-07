@@ -70,6 +70,8 @@ FROM (
 3. **Docker Compose**: Use Docker Compose to run both containers simultaneously.
 
 
-## Note
+## Note to run
 
-Please put the jar file under dockers directory.
+1- run mysql docker manually then Build with meven. 
+2- Please put the jar file under dockers directory.
+3- after that exec the docker-compose.
