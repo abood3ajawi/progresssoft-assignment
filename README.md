@@ -38,7 +38,7 @@ CREATE TABLE fx_deals (
     CONSTRAINT chk_to_currency_iso CHECK (LENGTH(to_currency_iso) = 3),
     CONSTRAINT chk_deal_amount CHECK (deal_amount > 0)
 );
-
+```
 
 
 ## Validation
@@ -61,7 +61,7 @@ FROM (
     FROM iso_currency
     WHERE CurrencyCode = ?2
 ) AS temp;
-
+```
 
 ## Deployment
 
