@@ -70,3 +70,6 @@ FROM (
 3. **Docker Compose**: Use Docker Compose to run both containers simultaneously.
 
 
+## Note
+
+Please put the jar file under dockers directory.
