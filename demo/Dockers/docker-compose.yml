@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  mysql_db:
+    build:
+      context: .
+      dockerfile: mysqlImage/DockerfileSQL
+    container_name: mysql_db_container
+    volumes:
+      - ./mysqlImage/init.sql:/docker-entrypoint-initdb.d/init.sql
+    network_mode: "host"
+  demo_app:
+    build:
+      context: .
+      dockerfile: FXDealsImage/DockerfileAPP
+    container_name: fxdeals_app_container
+    restart: always
+    network_mode: "host"

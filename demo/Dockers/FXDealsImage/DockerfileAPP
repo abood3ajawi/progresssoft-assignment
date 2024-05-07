@@ -1,0 +1,12 @@
+# Start a new stage to build the actual image
+FROM openjdk:17-jdk-alpine
+
+
+# Copy the built JAR file from the previous stage
+COPY FXDeals-0.0.1-SNAPSHOT.jar app-v2.jar
+
+# Expose port 8080
+EXPOSE 8080
+
+# Define the command to run the application
+ENTRYPOINT ["java", "-jar", "app-v2.jar"]
